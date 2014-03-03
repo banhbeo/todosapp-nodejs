@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require normalize.css
+ *= require_self
+ *= require_tree .
+ */
+input[type="text"] {
+  width: 100%;
+  border: 1px solid #D1D1D1;
+  padding: 8px 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: #929292;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.wrap {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.selected {
+  font-weight: 700;
+}
+
+.app-title,
+.app-description {
+  text-align: center;
+}
+
+.main {
+  padding: 1em;
+  color: #757575;
+  border: 1px solid #F1F1F1;
+}
+
+.todos-filter {
+  font-size: 14px;
+  text-align: center;
+}
+
+.todos-filter > a {
+  margin: auto 10px;
+}
+
+.todos-filter > a.active {
+  font-weight: 700;
+}
+
+.todos-list {
+  border: 1px solid #F1F1F1;
+}
+
+.todo {
+  font-size: 18px;
+  padding: 10px;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.todo:last-child {
+  border-bottom: 0;
+}
+
+.todo .check {
+  margin-right: 10px;
+}
+
+.todo.completed .content {
+  color: #ACACAC;
+  text-decoration: line-through;
+}
+
+.todo.hidden {
+  display: none;
+}
+
+.todo.editing .content,
+.todo.editing .check {
+  display: none;
+}
+
+.todo.editing .content-edit {
+  display: block;
+}
+
+.todo .content-edit {
+  display: none;
+}
+
+.todo .delete {
+  float: right;
+  text-decoration: none;
+  opacity: 0.3;
+}
+
+.todo .delete:hover {
+  opacity: 1;
+}
+
+.todos-stat {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.todos-stat .left {
+  float: left;
+}
+
+.todos-stat .number {
+  font-weight: 700;
+}
+
+.todos-stat .right {
+  float: right;
+}
