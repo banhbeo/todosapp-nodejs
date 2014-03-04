@@ -1,5 +1,9 @@
-var app = app || {};
+require([
+  'app/views/app-view',
+  'app/routers/router'
+], function (AppView, Router) {
 
-(function () {
-  new app.AppView;
-}())
+  new Router;
+  Backbone.history.start();
+  new AppView;
+})
