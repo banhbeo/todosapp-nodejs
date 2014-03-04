@@ -9,6 +9,7 @@ var app = app || {};
     },
     setFilter: function(param) {
       app.filter = param || '';
+      
       app.todos.trigger('filter');
     }
   });

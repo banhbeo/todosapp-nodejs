@@ -19,7 +19,7 @@ var app = app || {};
       this.listenTo(app.todos, 'change:completed', this.filterOne);
       this.listenTo(app.todos, 'filter', this.filterAll);
       
-      app.todos.fetch();
+      app.todos.fetch({reset: true});
 
     },
     render: function() {
@@ -58,6 +58,7 @@ var app = app || {};
     }, 
     filterOne: function(todo) {
       todo.trigger('visible')
+
     },
     filterAll: function() {
       app.todos.each(this.filterOne, this)
